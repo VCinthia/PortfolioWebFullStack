@@ -12,6 +12,10 @@
   <!-- esto es para que el navegador se de cuenta cuando estamos en un celuar o tableta-->
 	<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!--FALTA BOOTSTRAP-->
+  <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css" crossorigin="anonymous">
+  <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
   
 </head>
 <body>
@@ -20,49 +24,47 @@
   <header>
     <div class="container">
       <div class="row top">
-        <div class="col-md-3"></div>
-        <div class="col-md-5">
+        <div class="col-md-4">
+          <img src="/src/imagenes/arg.programa.png" alt=" " class="logo"></a></div>
+        <!-- es necesario este div? "<div class="col-md-5"></div>" -->
+        <div class="col-md-3">
           <ul class='botonera'>
-            <li><a href="C:/Users/cinth/OneDrive/Documentos/Develop/PORTFOLIO/Frontend/portfoliocv/src/index.html" title="Volver al Inicio" data-ancla="inicio" > Inicio </a></li>
-            <li><a href="#sobreMi" data-ancla="sobreMi" > Sobre Mi </a></li>
-            <li><a href="#contacto" data-ancla="contacto"> Contacto </a></li>
-            <li><a href="https://github.com/VCinthia" target="_blank" title="Ir a GitHub"> GitHub </a></li>
-              <li><a href="#" target="_blank" title="Ir a Descargar CV - PDF"> Descargar CV  </a></li>
+              <li><a href="C:/Users/cinth/OneDrive/Documentos/Develop/PORTFOLIO/Frontend/portfoliocv/src/index.html" title="Volver al Inicio" data-ancla="inicio" > Inicio </a></li>
+              <li><a href="#sobreMi" data-ancla="sobreMi" > Sobre Mi </a></li>
+              <li><a href="#contacto" data-ancla="contacto"> Contacto </a></li>
+              <li><a href="https://github.com/VCinthia" target="_blank" title="Ir a GitHub"> GitHub </a></li>
+              <li><a href="C:\Users\cinth\OneDrive\Documentos\Develop\PORTFOLIO\Frontend\CV Cinthia IT.pdf" target="_blank" title="Ir a Descargar CV - PDF"> Descargar CV  </a></li>
             </ul>
-  
         </div>
       </div>
     </div>
   </header>
- 
-  
-
+   
     <div class="principal vertical-centered-text" id="inicio">
       <div class="col-md-8 cta">
         <h1> Hola, <br>soy Cinthia! <br> </h1>
         <h2>Bienvenido a mi Portfolio</h2>
+        <img src="/src/imagenes/Ritsuko_discord.jpg"><!--aqui va nuestra foto-->
       </div>
     </div>
 
 
-<nav>
-  <!--ver que no direccionan correctamente: es porque la direccion va con "/" y no con "\" -->
-  <a href="C:\Users\cinth\OneDrive\Documentos\Develop\PORTFOLIO\Frontend\portfoliocv\src\contacto.html" title="Ir a Contacto"> Contacto </a>
-  
-</nav>
-
-
 <main>
-    <!-- <div> </div> -->
-      <h3>
-       Soy Desarrolladora Web. <br>En constate aprendizaje y con creatividad,
-       <br> busco desarrollar nuevas ideas y 
-       <br>trabajar en equipo para lograr los mejores resultados.
-      </h3>
+    <div class="sobreMi">
+      <div>
+        <h3> Soy Desarrolladora Web. <br>En constate aprendizaje y con creatividad,
+        <br> busco desarrollar nuevas ideas y 
+        <br>trabajar en equipo para lograr los mejores resultados.
+        </h3>
+      </div>
+      <div>
+        <h3><a id="tecnologias"></a>Aquí puedes ver las tecnologías con las que trabajo</h3>
+        <!-- Aqui galerias con tecnologías-->
+      </div>
     </div>
 
         
-    <div class="container sobre-mi" id="sobreMi">
+    <div class="container card" id="card"><!--no arme el card todavia-->
       <div>
         <h3><a id="experienciaLaboral"></a> Experiencia laboral </h3>
       <!-- Aqui experiencias laborales-->
@@ -74,10 +76,7 @@
       </div>
 
     <div>
-      <h3><a id="tecnologias"></a>Aquí puedes ver las tecnologías con las que trabajo</h3>
-      <!-- Aqui galerias con tecnologías-->
-    </div>
-  </div>
+      
     
   </main>
 

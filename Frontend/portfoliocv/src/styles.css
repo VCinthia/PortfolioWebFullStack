@@ -12,5 +12,11 @@ h1 {
 NAV { DISPLAY: FLEX; align-items: center;}
 
 
-footer button {background-color: rgb(173, 216, 230); border-radius: 4mm; }
-body { color: #333333;}
+footer button {
+    background-color: rgb(173, 216, 230);
+    border-radius: 4mm;
+ }
+
+body { 
+    color: #333333;
+}
