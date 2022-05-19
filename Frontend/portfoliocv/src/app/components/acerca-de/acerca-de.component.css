@@ -1,0 +1,12 @@
+.row{
+    padding: 30px;
+}
+div{
+    text-align: right;
+    align-items: center;   
+}
+
+#nombreConFoto{
+    text-align: left;
+    margin: auto;
+}
