@@ -5,6 +5,7 @@
     padding-left: 20px;
     padding-bottom: 20px;
     padding-top: 20px;
+    padding-right: 20px;
 }
 
 /* Container for skill bars */
@@ -51,7 +52,7 @@
 
 .bdd {
   margin: 3px;
-  width: 50%;
+  width: 30%;
    background-color: #919E95;
    border-radius: 15px;
 } /* Dark Grey */
@@ -86,7 +87,7 @@
 
 .metodologias {
   margin: 3px;
-  width: 60%;
+  width: 50%;
    background-color: #919E95;
    border-radius: 15px;
 } /* Dark Grey */
