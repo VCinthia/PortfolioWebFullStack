@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators'
   providedIn: 'root'
 })
 export class AutenticacionService {
-  url="http://localhost:8080/login"//armar en Apache el ..8080/auth/login?
+  url="http://localhost:8080/personas"//armar en Apache el ..8080/auth/login
   currentUserSubject: BehaviorSubject<any>;
   constructor(private http:HttpClient) {
     console.log("El servicio de autenticación está corriendo");

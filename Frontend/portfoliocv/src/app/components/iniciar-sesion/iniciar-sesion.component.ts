@@ -9,7 +9,7 @@ import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
   styleUrls: ['./iniciar-sesion.component.css']
 })
 export class IniciarSesionComponent implements OnInit {
- form:FormGroup;
+  form:FormGroup;
   constructor(private formBuilder:FormBuilder, private autenticacionService:AutenticacionService, private ruta:Router) { 
     this.form=this.formBuilder.group(
       {
@@ -44,5 +44,3 @@ export class IniciarSesionComponent implements OnInit {
   }
 
 }
-
-
