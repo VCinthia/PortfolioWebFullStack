@@ -31,9 +31,8 @@ public class JwtTokenUtil {
                 .signWith(SignatureAlgorithm.HS512,secretKey)
                 .compact();        
     }
-    public boolean validateAccesToken(String token){
-        try{
-            
+    public boolean validateAccessToken(String token){
+        try{            
             Jwts.parser().setSigningKey(secretKey).parseClaimsJws(token);
             return true;
             } catch (ExpiredJwtException ex){
@@ -44,8 +43,7 @@ public class JwtTokenUtil {
                 LOGGER.error("JWT is invalid", ex);
             } catch (UnsupportedJwtException ex){
                 LOGGER.error("Signature Validation Failed", ex);
-            }
-        
+            }        
         return false;
         }
     public String getSubject(String token){

@@ -1,5 +1,5 @@
-
 package com.portfolio.cv.Entity;
+
 
 import java.util.Collection;
 import javax.persistence.Column;
@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+
+
 
 @Entity
 @Table(name="users")
@@ -22,13 +24,12 @@ public class UserLogin implements UserDetails{
     @Column (nullable = false)
     private String password;
 
-    public UserLogin( String email, String password) {
-        this.email = email;
-        this.password = password;
+    public UserLogin() {
     }
 
-    public UserLogin() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public UserLogin(String email, String password) {
+        this.email = email;
+        this.password = password;
     }
 
     public Integer getId() {
@@ -45,24 +46,30 @@ public class UserLogin implements UserDetails{
 
     public void setEmail(String email) {
         this.email = email;
+    }   
+       
+    public void setPassword(String password) {
+        this.password = password;
     }
-        
+    //////////
+    
     
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return null;
+        
     }
 
     @Override
     public String getPassword() {
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        return password;
+        return password;// return null;
     }
 
     @Override
     public String getUsername() {
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        return this.email;
+        return this.email;// return null;
     }
 
     @Override

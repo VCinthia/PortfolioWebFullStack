@@ -25,7 +25,7 @@ public class UserLoginRepositoryTests{
     @Test
     public void testCreateUser(){
         PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-        String rawPassword="0000";
+        String rawPassword="16011992";
         String encodePassword=passwordEncoder.encode(rawPassword);
         UserLogin newUserLogin=new UserLogin("votacinthia@gmail.com", encodePassword);
         UserLogin savedUser=repository.save(newUserLogin);
