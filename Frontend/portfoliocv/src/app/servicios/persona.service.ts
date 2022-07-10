@@ -7,14 +7,14 @@ import { persona } from '../model/persona.model';
   providedIn: 'root'
 })
 export class PersonaService {
-  URL = 'http://localhost:8080/personas/traer'; 
+  URL = 'http://localhost:8080/api/personas/traer'; 
 
   constructor(private http: HttpClient) { 
-    console.log("El servicio de persona está corriendo");
+    console.log("El servicio de persona está corriendo1");
   }
 
   public getPersona(): Observable<persona>{
-    console.log("El servicio persona esta corriendo");
-    return this.http.get<persona>(this.URL+'traer/perfil');
+    console.log("El servicio persona esta corriendo2");
+    return this.http.get<persona>(this.URL+'/perfil');
   }
 }

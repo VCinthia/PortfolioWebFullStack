@@ -1,0 +1,193 @@
+body{
+	background: #eeeeee;
+	font-family: 'Open Sans', sans-serif;
+	color:#000000
+	
+}
+
+.logo{
+	position: relative;
+	align-items: left;
+	height: 120px;
+	margin-right: 10px;
+}
+
+.col-md-4 ul{
+	text-align: right;
+	padding-right: 40px;
+}
+
+.botonera li{
+	display: inline-block;
+	margin-left: 8px;
+	font-weight: 600;
+	font-size: 20px;
+}
+
+.botonera li a{
+	color: rgb(255, 255, 255);
+	/*boton no presionado*/
+}
+
+.botonera li a:hover{
+	color: #C1914B;
+	text-decoration: none;
+	/*boton cuando nos posicionamos*/
+}
+
+header{
+	background: #14404F; 
+	padding-top: 10px;
+	padding-bottom: 10px;
+	position:fixed;
+	width: 100%;
+
+}
+
+
+.principal{
+	background-color: #4D4D56;
+	height: 50vh;
+	background-image: url("imagenes/darkblue.jpg" ) ;
+}
+
+
+.vertical-centered-text {
+  -ms-display: flex;
+  display: flex;
+  /* alineacion vertical */
+  align-items: center;
+   /* alineacion horizontal */
+  text-align: left;
+  padding-left: 150px;
+}
+
+.cta{
+	text-align: left;
+}
+
+h1{
+	font-weight: 700;
+	font-size: 50px;
+	color: #DCCBBD;
+}
+
+h3{
+	color: #2A3030;
+}
+
+.orange{
+
+	background: #FF00FF;
+}
+.sobreMi{
+	-ms-display: flex;
+  	display: flex;
+	background-color: red;
+	height: 20vh;
+  	/* alineacion vertical */
+  		align-items: center;
+    /* alineacion horizontal */
+	 text-align: left;
+	 padding-left: 40px;
+}
+
+.sobreMi-h1{
+	font-weight: 100;
+}
+
+.sobreMi-img{
+	width: 40%;
+	text-align: right;
+	
+}
+
+.servicios{
+	text-align: center;
+	padding-top: 150px;
+	padding-bottom: 50px;
+}
+.servicios img{
+	width: 40%;
+	text-align: center;
+}
+
+.servicios h1{
+	color: #666;
+	font-weight: 100;
+}
+.servicios .images{
+	padding-top: 30px;
+}
+
+
+.social{
+	text-align: center;
+}
+.social img{
+	width: 30%;
+	text-align: center;
+}
+
+footer{
+	background: #757575;
+	height: 50vh;
+	padding-top: 30px;
+}
+footer h1{
+	text-align: center;
+	font-weight: 100;
+}
+
+#home {
+	color: white;
+}
+.col-xs-4{
+	text-align: center;
+}
+
+
+/*@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) { }
+@media only screen and (min-width: 324px) and (max-width: 736px) {*/
+@media only screen and (max-device-width: 480px), only screen and (min-device-width: 560px) and (max-device-width: 1136px) {
+  /* iPhone only */
+  /* Styles */
+  .off {
+    display: none !important;
+  }
+  .on {
+    display: block !important;
+  }
+  .col-md-2 {
+    width: 100%;
+  }
+  .social img{
+  	width: 100%;
+  }
+  .botonera li a {
+    font-size: 13px;
+}
+.sobre-mi{
+	height: 400px;
+	overflow: hidden;
+	padding-top: 15px;
+}
+#home{
+	padding-top: 65px;
+}
+
+h1{
+	font-size: 30px;
+}
+
+footer{
+	padding-top: 10px;
+}
+
+h3{
+	color: #4D4D56;
+}
+
+}

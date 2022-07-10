@@ -8,12 +8,12 @@ import { observableToBeFn } from 'rxjs/internal/testing/TestScheduler';
   providedIn: 'root'
 })
 export class PortfolioService {
-  url="http://localhost:8080";//arreglar, no se cual va
+  url:string="http://localhost:8080/api/portfolio";//arreglar, no se cual va
 
   constructor(private http:HttpClient) { }
 
   obtenerDatos():Observable<any>{
     console.log("El servicio portfolio esta corriendo");//no me esta funcionando
-    return this.http.get/*<any>*/(/*this.url+"persona"*/'src/assets/data/persona.json');
+    return this.http.get(this.url+"persona");
   }
 }

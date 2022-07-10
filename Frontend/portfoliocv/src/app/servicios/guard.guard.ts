@@ -15,7 +15,7 @@ export class GuardGuard implements CanActivate {
       if (currentUser && currentUser.accessToken){
         return true;
       }else{
-        this.rutas.navigate(['/iniciar-sesion']);
+        this.rutas.navigate(['/api/login']);
         return false;
       }
   }
