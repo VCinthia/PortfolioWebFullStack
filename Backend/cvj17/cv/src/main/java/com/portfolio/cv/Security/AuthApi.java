@@ -2,7 +2,7 @@
 package com.portfolio.cv.Security;
 //Controlador de la autenticacion
 
-import com.portfolio.cv.Entity.UserLogin;
+import com.portfolio.cv.Model.UserLogin;
 import com.portfolio.cv.Security.jwt.JwtTokenUtil;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,28 +19,26 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AuthApi {
     @Autowired
-    AuthenticationManager authManager;
+        AuthenticationManager authManager;
     @Autowired
-    JwtTokenUtil jwtTokenUtil;
+        JwtTokenUtil jwtTokenUtil;
     @PostMapping("/login")//ver
     public ResponseEntity<?> login(@RequestBody @Valid AuthRequest request){
         try{
             Authentication authentication = authManager.authenticate(
-            new UsernamePasswordAuthenticationToken(
-                request.getEmail(),
-                request.getPassword())
+                new UsernamePasswordAuthenticationToken(
+                    request.getEmail(),
+                    request.getPassword())
             );
             
-            UserLogin userLogin = (UserLogin) authentication.getPrincipal();
-            String accessToken = 
-        jwtTokenUtil.generateAccessToken(userLogin);
-            AuthResponse response = new 
-        AuthResponse (userLogin.getEmail(),accessToken);
+            UserLogin userLogin =(UserLogin) authentication.getPrincipal();
+            String accessToken = jwtTokenUtil.generateAccessToken(userLogin);
+            AuthResponse response = new AuthResponse (userLogin.getEmail(),accessToken);
             
             return ResponseEntity.ok().body(response);
         } catch (BadCredentialsException ex){
-             return
-                     ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
         }
     }
 }
+

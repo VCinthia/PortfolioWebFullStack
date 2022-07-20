@@ -1,11 +1,12 @@
 package com.portfolio.cv.Security.jwt;
 
-import com.portfolio.cv.Entity.UserLogin;
+import com.portfolio.cv.Model.UserLogin;
 import java.io.IOException;
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import static org.apache.naming.SelectorContext.prefix;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -13,13 +14,17 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
+import org.springframework.stereotype.Component;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Bean;
 
-
+@Component
 public class JwtTokenFilter  extends OncePerRequestFilter {
     @Autowired
     private JwtTokenUtil jwtUtil;
-    
+        
     @Override
     protected void doFilterInternal(HttpServletRequest request, 
                                     HttpServletResponse response, 
@@ -50,7 +55,8 @@ public class JwtTokenFilter  extends OncePerRequestFilter {
                     return false;
                 }
                 return true;
-            }
+    }
+            
     private String getAccessToken(HttpServletRequest request)        {
         String header = request.getHeader("Authorization");
         String token = header.split(" ")[1].trim();
@@ -76,6 +82,5 @@ public class JwtTokenFilter  extends OncePerRequestFilter {
         userDetails.setEmail(jwtSubject[1]);
         
         return userDetails;
-    }
-            
+    }            
 }

@@ -1,7 +1,7 @@
 
 package com.portfolio.cv.Repository;
 
-import com.portfolio.cv.Entity.Persona;
+import com.portfolio.cv.Model.Persona;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,6 +1,6 @@
 package com.portfolio.cv.Repository;
 
-import com.portfolio.cv.Entity.UserLogin;
+import com.portfolio.cv.Model.UserLogin;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 

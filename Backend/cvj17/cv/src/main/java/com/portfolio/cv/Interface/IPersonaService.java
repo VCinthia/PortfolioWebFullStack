@@ -4,7 +4,7 @@ package com.portfolio.cv.Interface;
 
 
 
-import com.portfolio.cv.Entity.Persona;
+import com.portfolio.cv.Model.Persona;
 import java.util.List;
 
 public interface IPersonaService {

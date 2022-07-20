@@ -5,7 +5,7 @@ import { AutenticacionService } from './servicios/autenticacion.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  //providers: [AutenticacionService],
+  providers: [AutenticacionService],
 })
 export class AppComponent {
   title = 'portfoliocv';

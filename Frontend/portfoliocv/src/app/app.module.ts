@@ -46,7 +46,7 @@ import { InterceptorService } from './servicios/interceptor.service';
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot({})/*va ({}) ??*/
+    ToastrModule.forRoot()/*va ({}) ??*/
   ],
   providers: [PortfolioService,
     { provide:HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true },

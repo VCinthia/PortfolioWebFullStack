@@ -1,5 +1,5 @@
 package com.portfolio.cv.Service;
-import com.portfolio.cv.Entity.Persona;
+import com.portfolio.cv.Model.Persona;
 import com.portfolio.cv.Interface.IPersonaService;
 import com.portfolio.cv.Repository.IPersonaRepository;
 import java.util.List;

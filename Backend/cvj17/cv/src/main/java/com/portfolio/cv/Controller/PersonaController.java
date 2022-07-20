@@ -1,6 +1,6 @@
 package com.portfolio.cv.Controller;
 
-import com.portfolio.cv.Entity.Persona;
+import com.portfolio.cv.Model.Persona;
 import com.portfolio.cv.Interface.IPersonaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;

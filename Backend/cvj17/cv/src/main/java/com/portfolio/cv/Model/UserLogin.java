@@ -1,4 +1,4 @@
-package com.portfolio.cv.Entity;
+package com.portfolio.cv.Model;
 
 
 import java.util.Collection;
@@ -14,13 +14,15 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 
 @Entity
-@Table(name="users")
+@Table(name="usersLogin")
 public class UserLogin implements UserDetails{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    
     @Column(nullable = false, unique = true, length=50)
     private String email;
+    
     @Column (nullable = false)
     private String password;
 
