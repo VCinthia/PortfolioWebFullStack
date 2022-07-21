@@ -20,7 +20,8 @@ export class InterceptorService  implements HttpInterceptor{
           }
         })
       }
-      console.log("El servicio Interceptor está corriendo " + JSON.stringify(currentUser));
+      //PARA VER SI CORRE Y EL TOKEN:
+      //console.log("El servicio Interceptor está corriendo " + JSON.stringify(currentUser));
       
       return next.handle(req);
     }

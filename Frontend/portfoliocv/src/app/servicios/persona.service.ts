@@ -7,7 +7,7 @@ import { persona } from '../model/persona.model';
   providedIn: 'root'
 })
 export class PersonaService {
-  URL = 'http://localhost:8080/api/personas/traer'; 
+  URL = 'http://localhost:8080/api/portofolio/personas/traer'; 
 
   constructor(private http: HttpClient) { 
     console.log("El servicio de persona está corriendo1");

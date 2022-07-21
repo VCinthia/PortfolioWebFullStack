@@ -10,8 +10,8 @@ import { map } from 'rxjs/operators'
 })
 export class AutenticacionService {
   
-  url="http://localhost:8080/api/";//revisar
-  //url="http://localhost:8080/api/login";//revisar
+  url="http://localhost:8080/api/login";//OK!
+ 
   currentUserSubject: BehaviorSubject<any>;
   constructor(private http:HttpClient) {
     console.log("El servicio de autenticación está corriendo");
