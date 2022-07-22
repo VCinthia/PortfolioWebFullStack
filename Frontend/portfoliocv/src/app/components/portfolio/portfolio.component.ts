@@ -8,10 +8,11 @@ import { Observable } from 'rxjs';
   styleUrls: ['./portfolio.component.css']
 })
 export class PortfolioComponent implements OnInit {
-  url:string="http://localhost:8080/api/portfolio/"//verr
+  url:string="http://localhost:8080/api/"//verr
   constructor(private http:HttpClient) { }
 
   obtenerDatos():Observable<any>{
+    console.log("portfolio component");    
     return this.http.get<any>(this.url+"persona");
   }
 

@@ -11,9 +11,10 @@ export class ExperienciaComponent implements OnInit {
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
-  this.datosPortfolio.obtenerDatos().subscribe(data=>{
-    this.experienciaList=data.experiencia;/*ver que todavia no cargue en ningun js la info experiencia, esta en bdd pero no esta traida*/
-  })
+    this.datosPortfolio.obtenerDatosExperiencia().subscribe(data=>{
+      console.log(data+"data de experiencia.components.ts todos los elementos");
+      this.experienciaList=data;
+    })
   }
 
 }

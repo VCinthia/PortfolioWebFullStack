@@ -1,36 +1,16 @@
 <div class="row">
 
-    <h1>Experiencia</h1>
+    <h1>Eduación</h1>
 
     <div class="col-lg-10">
-        <ul>
-            <ul><!--*ngFor="let estudio of estudioList" --></ul>
-            <li>
-                <!--<h2>{{estudio.institucion}} - {{estudio.titulo}}</h2> - <h4>{{estudio.periodo}}</h4>-->
-                <h2>Estudio1</h2> - <h4>Lapso</h4>
-            </li>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti odio repellendus, incidunt perferendis eos in vitae obcaecati doloremque, vero dolor voluptatibus quo, suscipit sunt culpa repellat aliquid dignissimos libero temporibus.
-                <!--{{estudio.descripcion}}-->
-            </p>
+        <ul class="items-list">
+            <li *ngFor="let estudio of estudioList">
+                <h3>{{estudio.institucion}} - {{estudio.titulo}}</h3>
+                <h6>{{estudio.periodo}}</h6>
+                <p>
+                    {{estudio.descripcion}}
+                </p>
+            </li>      
         </ul>
-        <ul>
-            <li>
-                <h2>Estudio2</h2> - <h4>Periodo</h4>
-            </li>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti odio repellendus, incidunt perferendis eos in vitae obcaecati doloremque, vero dolor voluptatibus quo, suscipit sunt culpa repellat aliquid dignissimos libero temporibus.
-            </p>
-        </ul>
-        <ul>
-            <li>
-                <h2>Estudio3</h2> - <h4>Periodo</h4>
-            </li>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti odio repellendus, incidunt perferendis eos in vitae obcaecati doloremque, vero dolor voluptatibus quo, suscipit sunt culpa repellat aliquid dignissimos libero temporibus.
-            </p>
-        </ul>
-
     </div>
-
 </div>

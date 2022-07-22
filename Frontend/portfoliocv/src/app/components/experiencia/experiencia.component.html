@@ -3,33 +3,14 @@
     <h1>Experiencia</h1>
 
     <div class="col-lg-10">
-        <ul>
-            <!--<li *ngFor="let experiencia of experienciaList"> /*No está ingresado ningun js ni metido con bdd, cuando lo tenga dejar con ngFor*/-->
-            <li>
-                <h2>Trabajo1</h2> -
-                <h4>Lapso</h4>
+        <ul class="items-list">
+            <li *ngFor="let experiencia of experienciaList">             
+                <h3>{{experiencia.puesto}}</h3>
+                <h6>{{experiencia.periodo}}</h6>
+                <p>
+                    {{experiencia.descripcion}}
+                </p>
             </li>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti odio repellendus, incidunt perferendis eos in vitae obcaecati doloremque, vero dolor voluptatibus quo, suscipit sunt culpa repellat aliquid dignissimos libero temporibus.
-            </p>
         </ul>
-        <ul>
-            <li>
-                <h2>Trabajo2</h2> - <h4>Periodo</h4>
-            </li>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti odio repellendus, incidunt perferendis eos in vitae obcaecati doloremque, vero dolor voluptatibus quo, suscipit sunt culpa repellat aliquid dignissimos libero temporibus.
-            </p>
-        </ul>
-        <ul>
-            <li>
-                <h2>Trabajo3</h2> - <h4>Periodo</h4>
-            </li>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti odio repellendus, incidunt perferendis eos in vitae obcaecati doloremque, vero dolor voluptatibus quo, suscipit sunt culpa repellat aliquid dignissimos libero temporibus.
-            </p>
-        </ul>
-
     </div>
-
 </div>
