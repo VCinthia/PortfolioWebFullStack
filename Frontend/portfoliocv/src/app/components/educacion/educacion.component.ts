@@ -7,13 +7,14 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./educacion.component.css']
 })
 export class EducacionComponent implements OnInit {
-  educacionList: any;
-
+  estudioList: any;
+  
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe(data=>{
-      this.educacionList=data.educacion;//todavia no esta hecho en mi aplicacion
+      console.log(data+"data de eduacion.components.ts en posicion 0");
+      this.estudioList=data.estudio[0];
     })
   }
 

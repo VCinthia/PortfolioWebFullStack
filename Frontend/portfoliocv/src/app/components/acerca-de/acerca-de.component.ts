@@ -9,13 +9,13 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./acerca-de.component.css']
 })
 export class AcercaDeComponent implements OnInit {
-  miPorfolio: any;
+  miPortfolio: any;
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe(data =>{
       console.log(data);      
-      this.miPorfolio = data[1]});
+      this.miPortfolio = data[1]});//Poner el lugar del array que queremos que lea
   }
 
 }

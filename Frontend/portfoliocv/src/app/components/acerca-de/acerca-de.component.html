@@ -1,19 +1,19 @@
 <div class="row">
+    <!--<i class="fa-solid fa-pen-to-square"></i>-->
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <!--ver que imagen segun bdd seria <img [src]= "miPortfolio.img"-->
-        <img        
-        src="../../../assets/img/Ritsuko_discord.jpg " class="img-fluid">
+        <!--<img [src]= "miPortfolio.img">ver que imagen de bdd pero no me funciona por cuestiones de seguridad>-->
+        <img src="../../../assets/img/Ritsuko_discord.jpg " class="img-fluid"><!---->
     </div>
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2" id="nombreConFoto">
-        <h3><!--{{miPortfolio.nombre + miPortfolio.apellido}}--> Cinthia Romina Vota</h3>
-        <h6><!--{{miPortfolio.sobre_mi}}-->Full Stack Developer Web Jr.</h6>
+        <h3>{{miPortfolio.nombre}} {{miPortfolio.apellido}} <!--Cinthia Romina Vota--></h3>
+        <h6>{{miPortfolio.rol}}<!--Full Stack Developer Web Jr.--></h6>
     </div>
     <div class="col-xs-12 col-sm-2 col-md-8 col-lg-8">
         <span>
-            <p> Soy Desarrolladora Web. <br>En constate aprendizaje y con creatividad,
+            {{miPortfolio.sobremi}}<!--<p> Soy Desarrolladora Web. <br>En constate aprendizaje y con creatividad,
             <br>busco desarrollar nuevas ideas y 
             <br>trabajar en equipo para lograr los mejores resultados.
-            </p>
+            </p>-->
         </span>
     </div>
 </div>

@@ -14,6 +14,6 @@ export class PortfolioService {
 
   obtenerDatos():Observable<any>{
     console.log("El servicio portfolio esta corriendo");//si funciona
-    return this.http.get(this.url+"portfolio/persona");//no funciona
+    return this.http.get(this.url+"portfolio/personas/traer");//si funciona! -> va la dir del request
   }
 }
