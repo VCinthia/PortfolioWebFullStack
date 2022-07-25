@@ -23,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { PortfolioService } from './servicios/portfolio.service';
 import { InterceptorService } from './servicios/interceptor.service';
+import { NEducacionComponent } from './components/educacion/n-educacion.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { InterceptorService } from './servicios/interceptor.service';
     ProyectosComponent,
     FooterComponent,
     IniciarSesionComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    NEducacionComponent
     ],
   imports: [
     BrowserModule,
