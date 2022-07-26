@@ -16,7 +16,7 @@ import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesi
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //External toastr:
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
@@ -46,9 +46,10 @@ import { NEducacionComponent } from './components/educacion/n-educacion.componen
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()/*va ({}) ??*/
+    ToastrModule.forRoot()
   ],
   providers: [PortfolioService,
     { provide:HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true },

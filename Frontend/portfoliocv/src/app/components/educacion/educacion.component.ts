@@ -8,6 +8,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class EducacionComponent implements OnInit {
   estudioList: any;  
+  estudio: any;
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
@@ -16,4 +17,10 @@ export class EducacionComponent implements OnInit {
       this.estudioList=data;
     })
   }
+  creaEducacion(){
+      this.datosPortfolio.crearDatosEducacion().subscribe(data=>{
+      this.estudioList=data;      
+    })
+  }
 }
+

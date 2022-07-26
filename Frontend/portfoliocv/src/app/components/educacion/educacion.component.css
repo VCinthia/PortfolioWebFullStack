@@ -18,6 +18,9 @@ ul{
 div{
     background-color: #d8ddda; /*ver color*/
 }
-.btn-ediciones{
-    align-items: flex-start;
+
+.btn-light{
+    background-color: #919E95;
+    margin: 13px;
+    color: #d8ddda;
 }
