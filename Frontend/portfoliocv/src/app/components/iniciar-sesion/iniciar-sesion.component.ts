@@ -16,13 +16,15 @@ export class IniciarSesionComponent implements OnInit {
   
   
   form:FormGroup;
-  constructor(private formBuilder:FormBuilder, private autenticacionService:AutenticacionService, private router: Router) { 
-    this.form=this.formBuilder.group(
-      {
-        email: ['', [Validators.required,Validators.email]],
-        password: ['', [Validators.required, Validators.minLength(8)]],        
-      }
-    )
+  constructor(
+    private formBuilder:FormBuilder, 
+    private autenticacionService:AutenticacionService, 
+    private router: Router) { 
+      this.form=this.formBuilder.group(
+        {
+          email: ['', [Validators.required,Validators.email]],
+          password: ['', [Validators.required, Validators.minLength(8)]],        
+        });
   }
 
   ngOnInit(): void {    

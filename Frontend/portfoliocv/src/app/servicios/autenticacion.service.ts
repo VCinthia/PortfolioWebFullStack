@@ -39,4 +39,12 @@ export class AutenticacionService {
       return this.currentUserSubject.value;
     }
 
+    public logout(){
+      sessionStorage.removeItem('currentUser');
+    }
+
+    public isUserLogged():boolean{
+      return sessionStorage.getItem('currentUser')!== null;
+    }
+
 }

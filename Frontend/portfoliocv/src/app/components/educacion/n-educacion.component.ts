@@ -5,7 +5,7 @@ import { EducacionComponent } from './educacion.component';
 @Component({
   selector: 'app-n-educacion',
   templateUrl: './n-educacion.component.html',
-  styleUrls: ['./n-educacion.component.css']
+  /* styleUrls: ['./n-educacion.component.css'] */
 })
 export class NEducacionComponent implements OnInit {
   constructor(private datosPortfolio:PortfolioService, private estudioList:EducacionComponent) { }

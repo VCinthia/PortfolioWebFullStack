@@ -19,8 +19,20 @@ div{
     background-color: #d8ddda; /*ver color*/
 }
 
-.btn-light{
+.data-control{
+    display: flex;
+    flex-direction: row;
+    /*justify-content: end;*/
+    
+}
+
+.btn{
     background-color: #919E95;
     margin: 13px;
     color: #d8ddda;
+
+}
+
+.btn-secondary{
+    background-color: grey;
 }
