@@ -2,10 +2,8 @@ import { ThisReceiver } from '@angular/compiler';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import * as e from 'cors';
-//import { ESTUDIO } from 'allModels';
+//import * as e from 'cors';
 import { Estudio } from 'interfaces';//Necesario para leer los elementos de cada estudio
-//import { config } from 'process';
 import { Observable } from 'rxjs';
 import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
@@ -37,7 +35,6 @@ export class EducacionComponent implements OnInit {
 
   ngOnInit(): void {
     this.isUserLogged =this.autenticacion.isUserLogged();
-    
     this.reloadData();
   }
 

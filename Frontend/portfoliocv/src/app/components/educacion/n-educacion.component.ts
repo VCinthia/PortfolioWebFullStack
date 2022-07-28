@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
-import { EducacionComponent } from './educacion.component';
 
 @Component({
   selector: 'app-n-educacion',
@@ -8,7 +6,7 @@ import { EducacionComponent } from './educacion.component';
   /* styleUrls: ['./n-educacion.component.css'] */
 })
 export class NEducacionComponent implements OnInit {
-  constructor(private datosPortfolio:PortfolioService, private estudioList:EducacionComponent) { }
+  constructor() { }
 
   ngOnInit(): void {    
   }
