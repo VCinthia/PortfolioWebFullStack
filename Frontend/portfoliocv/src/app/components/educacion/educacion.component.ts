@@ -1,10 +1,7 @@
-import { ThisReceiver } from '@angular/compiler';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 //import * as e from 'cors';
 import { Estudio } from 'interfaces';//Necesario para leer los elementos de cada estudio
-import { Observable } from 'rxjs';
 import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
@@ -34,14 +31,14 @@ export class EducacionComponent implements OnInit {
     }
 
   ngOnInit(): void {
-    this.isUserLogged =this.autenticacion.isUserLogged();
+    this.isUserLogged = this.autenticacion.isUserLogged();
     this.reloadData();
   }
 
   private reloadData(){
-    this.datosPortfolio.obtenerDatosEducacion().subscribe(data=>{
-      //console.log(data+"data de educacion.components.ts traer todos los elementos");
-      this.estudioList=data;
+    this.datosPortfolio.obtenerDatosEducacion().subscribe(
+      (data)=>{
+        this.estudioList = data;
     });
   }
 
@@ -51,7 +48,7 @@ export class EducacionComponent implements OnInit {
       institucion: '', 
       titulo: '',
       periodo: '',
-      descripcion: '',
+      descripcion: ''
     });
   }
 
@@ -61,14 +58,14 @@ export class EducacionComponent implements OnInit {
       institucion: estudio.institucion, 
       titulo: estudio.titulo,
       periodo: estudio.periodo,
-      descripcion: estudio.descripcion,
+      descripcion: estudio.descripcion
     })
   }
 
   onSubmit() {    
     //console.log(this.educacionForm.value);
     let estudio:Estudio = this.educacionForm.value;
-    if(this.educacionForm.get('id')?.value == ''){
+    if (this.educacionForm.get('id')?.value == ''){
       this.datosPortfolio.crearDatosEducacion(estudio).subscribe(
         (nuevoEstudio: Estudio)=>{
           this.estudioList.push(nuevoEstudio);
@@ -87,10 +84,8 @@ export class EducacionComponent implements OnInit {
   }
 
   onEditarEducacion(index: number){
-    console.log(index);
     let estudio: Estudio = this.estudioList[index];
-    this.loadForm(estudio);
-    
+    this.loadForm(estudio);    
   }
 
   onEliminarEducacion(index: number){
@@ -100,7 +95,6 @@ export class EducacionComponent implements OnInit {
         this.reloadData();
       })
     }
-  }
-  
+  }  
 }
 
