@@ -1,18 +1,85 @@
 <div class="row">
-    <h1> Proyectos realizados</h1>
-    <div class="container">
-        <div class="col-sm-12 col-md-6 col-lg-6 p1">
-            <ul class="items-list">
-                <li *ngFor="let proyecto of proyectosList">
-                    <h4>{{proyecto.nombre}}</h4>
-                    <p>
-                        {{proyecto.descripcion}}
-                    </p>
-                    <div class="col-sm-12 col-md-3 col-lg-3 offset-md-1 offset-lg-1 p2">
-                        <a href={{proyecto.url}} target="_blank"><img [src]="proyecto.imagen" class="img-fluid img-proyect" id="frescoycongelado" title="Ir a la Pagina"></a>
-                    </div>
-                </li>      
-            </ul>        
-        </div>
+    <h2> Proyectos realizados</h2>
+
+    <div class="col-lg-2"><!--class="card-titles"-->
+        <h2>Eduación </h2> 
+        <div *ngIf="isUserLogged" class="btn-crear">            
+            <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#proyectoForm" (click)="onNuevoProyecto()" ><i class="bi bi-plus-circle-fill"></i> Agregar </button>
+        </div>    
     </div>
+    
+    <div class="col-lg-10">
+        <ul class="items-list" id="proyectoList">
+            <li *ngFor="let proyecto of proyectoList; let i = index">
+                <h3>{{proyecto.nombre}}</h3>
+                <p>
+                    {{proyecto.descripcion}}
+                </p>
+                <div class="col-sm-12 col-md-3 col-lg-3 offset-md-1 offset-lg-1 p2">
+                    <a href={{proyecto.url}} target="_blank"><img [src]="proyecto.imagen" class="img-fluid img-proyect" id="frescoycongelado" title="Ir a la Pagina"></a>
+                </div>
+
+                <div ng *ngIf="isUserLogged" class="data-control">
+                    <div class="btn-edit">
+                      <button class="btn btn-right" data-bs-toggle="modal" data-bs-target="#proyectoForm" (click)="onEditarProyecto(i)"><i class="bi bi-pen-fill"></i> Editar</button>
+                    </div>
+                    <div class="btn-delete">
+                      <button  class="btn btn-right" (click)="onEliminarProyecto(i)"><i class="bi bi-x-circle-fill"></i> Eliminar</button>
+                    </div>
+                </div>                
+            </li>      
+        </ul>
+    </div>
+
+    <!--MODAL creacion/edicion-->
+        
+    <div class="modal fade" id="proyectoForm" tabindex="-1" aria-labelledby="proyectoFormLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="proyectoFormLabel">Proyecto</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form [formGroup]="proyectoForm" (ngSubmit)="onSubmit()">
+                <input type="hidden" name="id" formControlName="id">
+
+                <div class="row mb-3"><!--Nombre-->
+                  <label for="nombre" class="col-sm-3 col-form-label">Nombre</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="nombre" formControlName="nombre" class="form-control" required>
+                  </div>                  
+                </div>
+
+                <div class="row mb-3"><!--Imagen-->
+                    <label for="imagen" class="col-sm-3 col-form-label">Imagen</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="imagen" formControlName="imagen" class="form-control" required>
+                    </div>                  
+                </div>
+
+                <div class="row mb-3"><!--URL-->
+                    <label for="url" class="col-sm-3 col-form-label">Url</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="url" formControlName="url" class="form-control" required>
+                    </div>                  
+                </div>
+
+                <div class="row mb-3"><!--Descipción-->
+                    <label for="descripcion" class="col-sm-3 col-form-label">Descipción</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="descripcion" formControlName="descripcion" class="form-control" required>
+                    </div>                  
+                </div>
+                
+                <div class="text-center">
+                    <button  type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button  data-bs-toggle="modal"  class="btn btn-primary">Guardar cambios</button>
+                </div>
+              </form>
+            </div>            
+          </div>
+        </div>
+      </div>
 </div>
+

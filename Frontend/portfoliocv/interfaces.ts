@@ -6,20 +6,20 @@ export interface Estudio{
     descripcion:string;
 }
 export interface Experiencia{
-    id?:number;
+    id:number;
     periodo:string;
     puesto:string;
     descripcion:string;
 }
 export interface Proyecto{
-    id?:number;
+    id:number;
     nombre:string;
     imagen:String;
     url:String;
     descripcion:String;
 }
 export interface Persona{
-    id?:number;
+    id:number;
     nombre:string;
     apellido:string;
     img:string;
@@ -27,14 +27,14 @@ export interface Persona{
     rol:string;
 }
 export interface SocialHeader {
-    id?:number;
+    id:number;
     email:string;
     github:string;
     linkedin:string;
     cv:string;
 }
 export interface Skills{
-    id?:number;
+    id:number;
     porcentaje: number;
     nombre:string;
 }

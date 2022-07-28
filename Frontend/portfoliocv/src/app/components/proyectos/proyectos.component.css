@@ -19,3 +19,20 @@
     border-radius:  20px;
 }
 
+.data-control{/*ver si este va*/
+    display: flex;
+    flex-direction: row;
+    /*justify-content: end;*/
+    
+}
+
+.btn{
+    background-color: #919E95;
+    margin: 13px;
+    color: #d8ddda;
+
+}
+
+.btn-secondary{
+    background-color: grey;
+}

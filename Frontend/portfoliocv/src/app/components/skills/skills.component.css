@@ -2,11 +2,20 @@
 * {box-sizing:border-box}
 
 .row{
+  background-color: #d8ddda;
     padding-left: 20px;
     padding-bottom: 20px;
     padding-top: 20px;
     padding-right: 20px;
+    
 }
+
+
+/*.card-titles{
+  align-items: baseline;
+  flex-direction: row;
+}*/
+
 
 /* Container for skill bars */
 .container {
@@ -14,88 +23,31 @@
   background-color: #d8ddda;
   border-radius: 15px;
   margin: 2px;
-
-  
   }
 
-  .skills {
-    text-align: right; /* Right-align text */
-    padding-right: 5px;
-    padding-top: 5px; /* Add top padding */
+.skills-porcent {
+  text-align: right; /* Right-align text */
+  padding-right: 5px;
+  padding-top: 5px; /* Add top padding */
   
-    color: rgb(255, 255, 255); /* White text color */
-    display: inline-block; 
-  }
+  color: rgb(255, 255, 255); /* White text color */
+  display: inline-block; 
+}
 
+.data-control{/*ver si este va*/
+  display: flex;
+  flex-direction: row;
+  /*justify-content: end;*/
+  
+}
 
-.ingles {
-    margin: 3px;
-    width: 60%;
-     background-color: #919E95;
-     border-radius: 15px;
-} /* Dark Grey */
+.btn{
+  background-color: #919E95;
+  margin: 13px;
+  color: #d8ddda;
 
-skills-porcent {
-  margin: 3px;
-    width: 60%;
-     background-color: #919E95;
-     border-radius: 15px;
-} /* Dark Grey */
+}
 
-
-.typescript {
-  margin: 3px;
-  width: 60%;
-   background-color: #919E95;
-   border-radius: 15px;
-} /* Dark Grey */
-
-.bdd {
-  margin: 3px;
-  width: 30%;
-   background-color: #919E95;
-   border-radius: 15px;
-} /* Dark Grey */
-
-.officepackwps {
-  margin: 3px;
-  width: 70%;
-   background-color: #919E95;
-   border-radius: 15px;
-} /* Dark Grey */
-
-.ilustracion {
-  margin: 3px;
-  width: 80%;
-   background-color: #919E95;
-   border-radius: 15px;
-} /* Dark Grey */
-
-.team {
-  margin: 3px;
-  width: 90%;
-   background-color: #919E95;
-   border-radius: 15px;
-} /* Dark Grey */
-
-.comunicacion {
-  margin: 3px;
-  width: 90%;
-   background-color: #919E95;
-   border-radius: 15px;
-} /* Dark Grey */
-
-.metodologias {
-  margin: 3px;
-  width: 50%;
-   background-color: #919E95;
-   border-radius: 15px;
-} /* Dark Grey */
-
-
-.git {
-  margin: 3px;
-  width: 50%;
-   background-color: #919E95;
-   border-radius: 15px;
-} /* Dark Grey */
+.btn-secondary{
+  background-color: grey;
+}
