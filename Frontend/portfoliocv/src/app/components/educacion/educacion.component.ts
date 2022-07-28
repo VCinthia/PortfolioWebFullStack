@@ -43,7 +43,7 @@ export class EducacionComponent implements OnInit {
 
   private reloadData(){
     this.datosPortfolio.obtenerDatosEducacion().subscribe(data=>{
-      console.log(data+"data de educacion.components.ts traer todos los elementos");
+      //console.log(data+"data de educacion.components.ts traer todos los elementos");
       this.estudioList=data;
     });
   }
@@ -65,11 +65,10 @@ export class EducacionComponent implements OnInit {
       titulo: estudio.titulo,
       periodo: estudio.periodo,
       descripcion: estudio.descripcion,
-    });
+    })
   }
 
-  onSubmit() {
-    
+  onSubmit() {    
     //console.log(this.educacionForm.value);
     let estudio:Estudio = this.educacionForm.value;
     if(this.educacionForm.get('id')?.value == ''){
@@ -79,9 +78,10 @@ export class EducacionComponent implements OnInit {
         }
       ); 
     }else{
-      this.datosPortfolio.editarDatosEducacion(estudio).subscribe(()=>{
+      this.datosPortfolio.editarDatosEducacion(estudio).subscribe(
+        ()=>{
         this.reloadData();
-      });
+      })
     }     
   }
 
@@ -89,15 +89,20 @@ export class EducacionComponent implements OnInit {
     this.clearForm();
   }
 
-  onEditarEducacion(index:number){
+  onEditarEducacion(index: number){
     console.log(index);
     let estudio: Estudio = this.estudioList[index];
     this.loadForm(estudio);
     
   }
 
-  onEliminarEducacion(index:number){
+  onEliminarEducacion(index: number){
     let estudio: Estudio = this.estudioList[index];
+    if(confirm("¿Está seguro que desea borrar la educación?")){
+      this.datosPortfolio.eliminarDatosEducacion(estudio.id).subscribe(()=>{
+        this.reloadData();
+      })
+    }
   }
   
 }

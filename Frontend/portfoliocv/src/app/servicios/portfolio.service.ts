@@ -9,9 +9,9 @@ import { Estudio } from 'interfaces';
   providedIn: 'root'
 })
 export class PortfolioService {
-  url:string="http://localhost:8080/api/";//ver
+  url:string="http://localhost:8080/api/";
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
   /*Persona*/
   obtenerDatosPersona():Observable<any>{
     console.log("El servicio portfolio persona esta corriendo");//si funciona
@@ -19,19 +19,20 @@ export class PortfolioService {
   }
 
   /*Educacion*/
-  obtenerDatosEducacion():Observable<any>{
+  obtenerDatosEducacion():Observable<Estudio[]>{
     console.log("El servicio portfolio educacion esta corriendo");
     return this.http.get<any>(this.url+"portfolio/estudio/ver");
   }
-  crearDatosEducacion(estudio: Estudio):Observable<any>{    
+  crearDatosEducacion(estudio: Estudio):Observable<Estudio>{    
     return this.http.post<any>(this.url+"portfolio/estudio/crear", estudio);
-  }    
-  eliminarDatosEducacion(estudio: Estudio):Observable<any>{    
-    return this.http.delete<any>(this.url+"portfolio/estudio/delete/"+ estudio.id);
-  }  
-  editarDatosEducacion(estudio: Estudio):Observable<any>{ 
-    return this.http.put<any>(this.url+"/api/portfolio/estudio/save", estudio);
   }
+  editarDatosEducacion(estudio: Estudio):Observable<Estudio>{ ///////////
+    return this.http.put<any>(this.url+"portfolio/estudio/save", estudio);
+  } 
+  eliminarDatosEducacion(id: number):Observable<Estudio>{    
+    return this.http.delete<any>(this.url+"portfolio/estudio/delete/"+ id);
+  }  
+  
 
   /*Experiencia*/
   obtenerDatosExperiencia():Observable<any>{
