@@ -1,0 +1,35 @@
+/*.row{    
+    text-align: left;
+    background-color: #d8ddda;;
+    padding: 30px;    
+    padding-bottom: 20px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #d8ddda;
+    align-items: left;
+}*/
+
+.container{
+        
+    align-content: center;
+ 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    padding: 30px;     
+    background-color: #d8ddda;
+    text-align: left;
+    
+    border-radius: 15px;
+    margin-bottom: 20px;/*para separar un div de otro*/
+        
+}
+
+.btn-primary{
+    background-color: #71807f;
+    border-color: #d8ddda;
+    
+}

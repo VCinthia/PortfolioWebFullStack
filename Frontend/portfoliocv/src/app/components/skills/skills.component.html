@@ -1,73 +1,68 @@
-<div class="row">
-    <h1>Skills</h1>
-    <div class="col-sm-6 col-md-6 col-lg-6">
-        <h5>Inglés</h5>
-        <div class="container">
-             <div class="skills ingles"><!--60%-->
-             </div>
-        </div>
+<div class="row" id="contenedorS">
+
+    <div class="col-lg-2"><!--class="card-titles"-->
+        <h2>Skills</h2> 
+        <div *ngIf="isUserLogged" class="btn-crear">            
+            <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#skillsForm" (click)="onNuevaSkill()" ><i class="bi bi-plus-circle-fill"></i> Agregar </button>
+        </div>    
     </div>
-    <div class="col-sm-6 col-md-6 col-lg-6">
-        <h5>HTML</h5>
-        <div class="container">
-             <div class="skills html"><!--60%-->
-             </div>
-        </div>
+    
+    <div class="col-lg-10">
+        <ul class="items-list" id="skillsList">
+            <li *ngFor="let skills of skillsList; let i = index">
+                <h3>{{skills.nombre}}</h3>
+                
+                <div class="container">
+                  <div class="skills-porcent">{{skills.porcentaje}}%</div>
+               </div>
+
+                <div ng *ngIf="isUserLogged" class="data-control">
+                    <div class="btn-edit">
+                      <button class="btn btn-right" data-bs-toggle="modal" data-bs-target="#skillsForm" (click)="onEditarSkill(i)"><i class="bi bi-pen-fill"></i> Editar</button>
+                    </div>
+                    <div class="btn-delete">
+                      <button  class="btn btn-right" (click)="onEliminarSkill(i)"><i class="bi bi-x-circle-fill"></i> Eliminar</button>
+                    </div>
+                </div>                
+            </li>      
+        </ul>
     </div>
-    <div class="col-sm-6 col-md-6 col-lg-6">
-        <h5>TypeScript</h5>
-        <div class="container">
-             <div class="skills typescript"><!--60%-->
-             </div>
+
+    <!--MODAL creacion/edicion-->
+        
+    <div class="modal fade" id="skillsForm" tabindex="-1" aria-labelledby="skillsFormLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="skillsFormLabel">Skill</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form [formGroup]="skillsForm" (ngSubmit)="onSubmit()">
+                <input type="hidden" name="id" formControlName="id">
+
+                <div class="row mb-3"><!--Nombre -->
+                  <label for="nombre" class="col-sm-3 col-form-label">Nombre</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="nombre" formControlName="nombre" class="form-control" required>
+                  </div>                  
+                </div>
+
+                <div class="row mb-3"><!--Titulo-->
+                    <label for="porcentaje" class="col-sm-3 col-form-label">Porcentaje</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="porcentaje" formControlName="porcentaje" class="form-control" required>
+                    </div>                  
+                </div>
+
+                <div class="text-center">
+                    <button  type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button  data-bs-toggle="modal"  class="btn btn-primary">Guardar cambios</button>
+                </div>
+              </form>
+            </div>            
+          </div>
         </div>
-    </div>
-    <div class="col-sm-6 col-md-6 col-lg-6">
-        <h5>Base de Datos</h5>
-        <div class="container">
-             <div class="skills bdd"><!--50%-->
-             </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-6 col-lg-6">
-        <h5>Office Pack - WPS</h5>
-        <div class="container">
-             <div class="skills officepackwps"><!--70%-->
-             </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-6 col-lg-6">
-        <h5>Illustrator - Sketch - Corel</h5>
-        <div class="container">
-             <div class="skills ilustracion"><!--80%-->
-             </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-6 col-lg-6">
-        <h5>Trabajo en equipo - Resolución de conflictos</h5>
-        <div class="container">
-             <div class="skills team"><!--90%-->
-             </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-6 col-lg-6">
-        <h5>Comunicacion oral y escrita</h5>
-        <div class="container">
-             <div class="skills comunicacion"><!--90%-->
-             </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-6 col-lg-6">
-        <h5>Metodologías de trabajo: Notion - Trello</h5>
-        <div class="container">
-             <div class="skills metodologias"><!--60%-->
-             </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-6 col-lg-6">
-        <h5>Git - GitHub</h5>
-        <div class="container">
-             <div class="skills git"><!--50%-->
-             </div>
-        </div>
-    </div>
+      </div>
 </div>
+

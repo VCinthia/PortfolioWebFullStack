@@ -1,8 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
 /* selector {propiedad:valor;} */
 
 html {
-    font-family: Crete Round; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
 }
 
 h1 {
@@ -10,7 +9,6 @@ h1 {
 }
 
 NAV { DISPLAY: FLEX; align-items: center;}
-
 
 footer button {
     background-color: rgb(173, 216, 230);

@@ -1,0 +1,37 @@
+[
+{"type":"header","version":"5.1.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"portfolio"},
+{"type":"table","name":"experiencia","database":"portfolio","data":
+[
+{"id":"1","nombre_empresa":"Estudio Jurídico Errasti y Asoc.","es_trabajo_actual":"1","fecha_inicio":"2018-09-01","fecha_fin":null,"descripcion":"Administración del Estudio. Notificadora AdHoc. Administración y seguimiento de expedientes.","persona_id":"1"}
+]
+}
+,{"type":"table","name":"formacion","database":"portfolio","data":
+[
+
+]
+}
+,{"type":"table","name":"persona","database":"portfolio","data":
+[
+{"id":"1","nombre":"Cinthia","apellido":"Vota","residencia":"Salta 950. Mar del plata","fecha_nacimiento":"1992-01-16","telefono":"2235039636","correo":"votacinthia@gmail.com","sobre_mi":"Desarrolladora Web","url_foto":"no-photo"}
+]
+}
+,{"type":"table","name":"tipos_empleo","database":"portfolio","data":
+[
+{"id":"1","nombre_tipo":"Freelancer"},
+{"id":"2","nombre_tipo":"Full Time"},
+{"id":"3","nombre_tipo":"Part Time"},
+{"id":"4","nombre_tipo":"Remote"}
+]
+}
+,{"type":"table","name":"tipo_formacion","database":"portfolio","data":
+[
+{"id":"1","nombre_tipo":"Full Stack Web Developer"},
+{"id":"2","nombre_tipo":"UX \/ UI"},
+{"id":"3","nombre_tipo":"Inglés para Desarrollo de Software"},
+{"id":"4","nombre_tipo":"Arquitectura"},
+{"id":"5","nombre_tipo":"Maestro Mayor de Obras"},
+{"id":"6","nombre_tipo":"Illustration \/ Design"}
+]
+}
+]

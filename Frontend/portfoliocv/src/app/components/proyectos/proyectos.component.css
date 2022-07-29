@@ -1,17 +1,10 @@
-.row{
+#contenedorProy{
     padding: 20px;
-    background-color: #d8ddda;
-    padding-bottom: 20px;
+    background-color: #d8ddda; /*ver color*/
 }
 
-.container{
-    width: auto;
-    align-content: center;
-}
-
-.p1, .p2{
-    display: inline-block;
-    text-align: justify;
+ul{
+    padding-block: 10px;
 }
 
 .img-proyect{
@@ -19,3 +12,18 @@
     border-radius:  20px;
 }
 
+.data-control{
+    display: flex;
+    flex-direction: row;    
+}
+
+.btn{
+    background-color: #919E95;
+    margin: 13px;
+    color: #d8ddda;
+
+}
+
+.btn-secondary{
+    background-color: grey;
+}

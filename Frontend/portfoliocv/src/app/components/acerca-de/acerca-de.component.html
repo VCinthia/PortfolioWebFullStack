@@ -1,17 +1,27 @@
-<div class="row">
-    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <img src="../../../assets/img/Ritsuko_discord.jpg " class="img-fluid">
-    </div>
-    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2" id="nombreConFoto">
-        <h3>Cinthia Romina Vota</h3>
-        <h6>Full Stack Developer Web Jr.</h6>
-    </div>
-    <div class="col-xs-12 col-sm-2 col-md-8 col-lg-8">
-        <span>
-            <p> Soy Desarrolladora Web. <br>En constate aprendizaje y con creatividad,
-            <br>busco desarrollar nuevas ideas y 
-            <br>trabajar en equipo para lograr los mejores resultados.
-            </p>
-        </span>
-    </div>
+<div class="container-fluid" >
+    <section class="bienvenido">
+        <img class="fondo" src="../../../assets/img/rejillaPequeña.jpg" alt="">
+        
+        
+        <div class="row">
+            <!--<i class="fa-solid fa-pen-to-square"></i>-->
+            <div class="col-xs-2 col-sm-2 col-md-4 col-lg-2">
+                <img [src]="miPortfolio.img" class="img-fluid" id="img-perfil">      
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2" id="nombreConFoto">
+                <h2><b>{{miPortfolio.nombre}} {{miPortfolio.apellido}}</b> <!--Cinthia Romina Vota--></h2>
+                <h5>{{miPortfolio.rol}}<!--Full Stack Developer Web Jr.--></h5>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <span>
+                    {{miPortfolio.sobremi}}<!--<p> Soy Desarrolladora Web. <br>En constate aprendizaje y con creatividad,
+                    <br>busco desarrollar nuevas ideas y 
+                    <br>trabajar en equipo para lograr los mejores resultados.
+                    </p>-->
+                </span>
+            </div>
+        </div>
+    </section>    
 </div>
+
+

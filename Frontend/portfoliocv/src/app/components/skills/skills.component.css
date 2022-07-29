@@ -1,100 +1,38 @@
 /* Make sure that padding behaves as expected */
 * {box-sizing:border-box}
 
-.row{
-    padding-left: 20px;
-    padding-bottom: 20px;
-    padding-top: 20px;
+#contenedorS{
+  padding: 20px;
+  background-color: #d8ddda; /*ver color*/
 }
 
 /* Container for skill bars */
 .container {
   width: 100%; /* Full width */
-  background-color: #d8ddda;
+  background-color: #ffffff;
   border-radius: 15px;
-  margin: 2px;
-
-  
+  margin: 2px;  
   }
 
-  .skills {
-    text-align: right; /* Right-align text */
-    padding-right: 5px;
-    padding-top: 5px; /* Add top padding */
-  
-    color: rgb(255, 255, 255); /* White text color */
-    display: inline-block; 
-  }
+.container .skills-porcent{
+  background-color: #ffffff;
+}
 
+ul{
+  padding-block: 10px;
+}
 
-.ingles {
-    margin: 3px;
-    width: 60%;
-     background-color: #919E95;
-     border-radius: 15px;
-} /* Dark Grey */
+.data-control{
+    display: flex;
+    flex-direction: row;
+}
 
-.html {
-  margin: 3px;
-    width: 60%;
-     background-color: #919E95;
-     border-radius: 15px;
-} /* Dark Grey */
+.btn{
+  background-color: #919E95;
+  margin: 13px;
+  color: #d8ddda;
+}
 
-
-.typescript {
-  margin: 3px;
-  width: 60%;
-   background-color: #919E95;
-   border-radius: 15px;
-} /* Dark Grey */
-
-.bdd {
-  margin: 3px;
-  width: 50%;
-   background-color: #919E95;
-   border-radius: 15px;
-} /* Dark Grey */
-
-.officepackwps {
-  margin: 3px;
-  width: 70%;
-   background-color: #919E95;
-   border-radius: 15px;
-} /* Dark Grey */
-
-.ilustracion {
-  margin: 3px;
-  width: 80%;
-   background-color: #919E95;
-   border-radius: 15px;
-} /* Dark Grey */
-
-.team {
-  margin: 3px;
-  width: 90%;
-   background-color: #919E95;
-   border-radius: 15px;
-} /* Dark Grey */
-
-.comunicacion {
-  margin: 3px;
-  width: 90%;
-   background-color: #919E95;
-   border-radius: 15px;
-} /* Dark Grey */
-
-.metodologias {
-  margin: 3px;
-  width: 60%;
-   background-color: #919E95;
-   border-radius: 15px;
-} /* Dark Grey */
-
-
-.git {
-  margin: 3px;
-  width: 50%;
-   background-color: #919E95;
-   border-radius: 15px;
-} /* Dark Grey */
+.btn-secondary{
+  background-color: grey;
+}

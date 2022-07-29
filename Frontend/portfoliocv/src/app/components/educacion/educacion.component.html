@@ -1,33 +1,81 @@
-<div class="row">
-
-    <h1>Experiencia</h1>
-
+<div class="row" id="contenedorEdu">
+  
+    <div class="col-lg-2"><!--class="card-titles"-->
+        <h2>Eduación </h2> 
+        <div *ngIf="isUserLogged" class="btn-crear">            
+            <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#educacionForm" (click)="onNuevaEducacion()" ><i class="bi bi-plus-circle-fill"></i> Agregar </button>
+        </div>    
+    </div>
+    
     <div class="col-lg-10">
-        <ul>
-            <li>
-                <h2>Estudio1</h2> - <h4>Lapso</h4>
-            </li>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti odio repellendus, incidunt perferendis eos in vitae obcaecati doloremque, vero dolor voluptatibus quo, suscipit sunt culpa repellat aliquid dignissimos libero temporibus.
-            </p>
-        </ul>
-        <ul>
-            <li>
-                <h2>Estudio2</h2> - <h4>Periodo</h4>
-            </li>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti odio repellendus, incidunt perferendis eos in vitae obcaecati doloremque, vero dolor voluptatibus quo, suscipit sunt culpa repellat aliquid dignissimos libero temporibus.
-            </p>
-        </ul>
-        <ul>
-            <li>
-                <h2>Estudio3</h2> - <h4>Periodo</h4>
-            </li>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti odio repellendus, incidunt perferendis eos in vitae obcaecati doloremque, vero dolor voluptatibus quo, suscipit sunt culpa repellat aliquid dignissimos libero temporibus.
-            </p>
-        </ul>
+        <ul class="items-list" id="educacionList">
+            <li *ngFor="let estudio of estudioList; let i = index">
+                <h3>{{estudio.institucion}} - {{estudio.titulo}}</h3>
+                <h6>{{estudio.periodo}}</h6>
+                <p>
+                    {{estudio.descripcion}}
+                </p>
 
+                <div ng *ngIf="isUserLogged" class="data-control">
+                    <div class="btn-edit">
+                      <button class="btn btn-right" data-bs-toggle="modal" data-bs-target="#educacionForm" (click)="onEditarEducacion(i)"><i class="bi bi-pen-fill"></i> Editar</button>
+                    </div>
+                    <div class="btn-delete">
+                      <button  class="btn btn-right" (click)="onEliminarEducacion(i)"><i class="bi bi-x-circle-fill"></i> Eliminar</button>
+                    </div>
+                </div>                
+            </li>      
+        </ul>
     </div>
 
+    <!--MODAL creacion/edicion-->
+        
+    <div class="modal fade" id="educacionForm" tabindex="-1" aria-labelledby="educacionFormLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="educacionFormLabel">Educacion</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form [formGroup]="educacionForm" (ngSubmit)="onSubmit()">
+                <input type="hidden" name="id" formControlName="id">
+
+                <div class="row mb-3"><!--Institucion-->
+                  <label for="institucion" class="col-sm-3 col-form-label">Institucion</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="institucion" formControlName="institucion" class="form-control" required>
+                  </div>                  
+                </div>
+
+                <div class="row mb-3"><!--Titulo-->
+                    <label for="titulo" class="col-sm-3 col-form-label">Titulo</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="titulo" formControlName="titulo" class="form-control" required>
+                    </div>                  
+                </div>
+
+                <div class="row mb-3"><!--Período-->
+                    <label for="periodo" class="col-sm-3 col-form-label">Período</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="periodo" formControlName="periodo" class="form-control" required>
+                    </div>                  
+                </div>
+
+                <div class="row mb-3"><!--Descipción-->
+                    <label for="descripcion" class="col-sm-3 col-form-label">Descipción</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="descripcion" formControlName="descripcion" class="form-control" required>
+                    </div>                  
+                </div>
+                
+                <div class="text-center">
+                    <button  type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button  data-bs-toggle="modal"  class="btn btn-primary">Guardar cambios</button>
+                </div>
+              </form>
+            </div>            
+          </div>
+        </div>
+      </div>
 </div>
