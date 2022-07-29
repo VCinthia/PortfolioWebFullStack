@@ -1,5 +1,6 @@
 .fijo{
     /*background-color: #7E9EA4 ;*/
+    padding: 10px;
     background-color: #919E95;
     z-index: +1;
     position:sticky;

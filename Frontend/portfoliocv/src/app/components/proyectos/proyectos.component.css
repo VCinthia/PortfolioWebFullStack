@@ -1,17 +1,10 @@
-.row{
+#contenedorProy{
     padding: 20px;
-    background-color: #d8ddda;
-    padding-bottom: 20px;
+    background-color: #d8ddda; /*ver color*/
 }
 
-.container{
-    width: auto;
-    align-content: center;
-}
-
-.p1, .p2{
-    display: inline-block;
-    text-align: justify;
+ul{
+    padding-block: 10px;
 }
 
 .img-proyect{
@@ -19,11 +12,9 @@
     border-radius:  20px;
 }
 
-.data-control{/*ver si este va*/
+.data-control{
     display: flex;
-    flex-direction: row;
-    /*justify-content: end;*/
-    
+    flex-direction: row;    
 }
 
 .btn{

@@ -1,51 +1,36 @@
 /* Make sure that padding behaves as expected */
 * {box-sizing:border-box}
 
-.row{
-  background-color: #d8ddda;
-    padding-left: 20px;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    padding-right: 20px;
-    
+#contenedorS{
+  padding: 20px;
+  background-color: #d8ddda; /*ver color*/
 }
-
-
-/*.card-titles{
-  align-items: baseline;
-  flex-direction: row;
-}*/
-
 
 /* Container for skill bars */
 .container {
   width: 100%; /* Full width */
-  background-color: #d8ddda;
+  background-color: #ffffff;
   border-radius: 15px;
-  margin: 2px;
+  margin: 2px;  
   }
 
-.skills-porcent {
-  text-align: right; /* Right-align text */
-  padding-right: 5px;
-  padding-top: 5px; /* Add top padding */
-  
-  color: rgb(255, 255, 255); /* White text color */
-  display: inline-block; 
+.container .skills-porcent{
+  background-color: #ffffff;
 }
 
-.data-control{/*ver si este va*/
-  display: flex;
-  flex-direction: row;
-  /*justify-content: end;*/
-  
+ul{
+  padding-block: 10px;
+}
+
+.data-control{
+    display: flex;
+    flex-direction: row;
 }
 
 .btn{
   background-color: #919E95;
   margin: 13px;
   color: #d8ddda;
-
 }
 
 .btn-secondary{

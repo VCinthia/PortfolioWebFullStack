@@ -1,18 +1,10 @@
-.row{
-    
+#contenedorEdu{    
     padding: 20px;
-}
-
-div{
     background-color: #d8ddda; /*ver color*/
 }
 
 ul{
     padding-block: 10px;
-}
-
-div{
-    background-color: #d8ddda; /*ver color*/
 }
 
 .data-control{
@@ -26,7 +18,6 @@ div{
     background-color: #919E95;
     margin: 13px;
     color: #d8ddda;
-
 }
 
 .btn-secondary{

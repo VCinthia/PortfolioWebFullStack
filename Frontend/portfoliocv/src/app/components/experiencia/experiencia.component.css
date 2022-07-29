@@ -1,24 +1,13 @@
-.row{
-    
+#contenedorExp{    
     padding: 20px;
-}
-
-div{
     background-color: #d8ddda; /*ver color*/
 }
 
 ul{
     padding-block: 10px;
 }
-.row{
-    
-    padding: 20px;
-}
 
-div{
-    background-color: #d8ddda; /*ver color*/
-}
-
+/*Botones*/
 .data-control{
     display: flex;
     flex-direction: row;
