@@ -10,8 +10,9 @@ import { map } from 'rxjs/operators'
 })
 export class AutenticacionService {
   
-  url="http://localhost:8080/api/login";//OK!
- 
+  //url="http://localhost:8080/api/login";//OK!
+  url="https://cvportfolioap.herokuapp.com/api/login"
+
   currentUserSubject: BehaviorSubject<any>;
   constructor(private http:HttpClient) {
     console.log("El servicio de autenticación está corriendo");
