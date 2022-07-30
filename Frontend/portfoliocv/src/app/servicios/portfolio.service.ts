@@ -9,7 +9,8 @@ import { Estudio, Experiencia, Proyecto, Skills } from 'interfaces';
   providedIn: 'root'
 })
 export class PortfolioService {
-  url:string="http://localhost:8080/api/";
+  //url:string="http://localhost:8080/api/";
+  url:string="https://cvportfolioap.herokuapp.com/api/";
 
   constructor(private http: HttpClient) { }
   /*Persona*/
