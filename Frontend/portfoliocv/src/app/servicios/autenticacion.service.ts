@@ -11,7 +11,8 @@ import { map } from 'rxjs/operators'
 export class AutenticacionService {
   
   //url="http://localhost:8080/api/login";//OK!
-  url="https://cvportfolioap.herokuapp.com/api/login"
+  //url="https://cvportfolioap.herokuapp.com/api/login"
+  url = "https://vcinthia-aplicacionjava-production.up.railway.app/api/login"
 
   currentUserSubject: BehaviorSubject<any>;
   constructor(private http:HttpClient) {

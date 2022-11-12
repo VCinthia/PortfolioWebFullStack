@@ -11,7 +11,6 @@ const routes: Routes = [
   {path:'api/portfolio', component:PortfolioComponent,/* canActivate:[GuardGuard]*/},//ver si se puede ver sin editar sacando el guard
   {path: 'api/login',component:IniciarSesionComponent},
   {path: '',redirectTo:'api/portfolio', pathMatch: 'full'},
-  /*{path:'api/portfolio/estudio/crear', component:EducacionComponent, canActivate:[GuardGuard]}*/
 ];
 
 @NgModule({

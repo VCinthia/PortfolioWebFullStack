@@ -10,7 +10,8 @@ import { Estudio, Experiencia, Proyecto, Skills } from 'interfaces';
 })
 export class PortfolioService {
   //url:string="http://localhost:8080/api/";
-  url:string="https://cvportfolioap.herokuapp.com/api/";
+  //url:string="https://cvportfolioap.herokuapp.com/api/";
+  url : string = "https://vcinthia-aplicacionjava-production.up.railway.app/api/"
 
   constructor(private http: HttpClient) { }
   /*Persona*/
