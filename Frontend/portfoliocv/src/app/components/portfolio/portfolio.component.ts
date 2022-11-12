@@ -8,7 +8,9 @@ import { Observable } from 'rxjs';
   styleUrls: ['./portfolio.component.css']
 })
 export class PortfolioComponent implements OnInit {
-  url:string="http://localhost:8080/api/"//verr
+  //url:string="https://cvportfolioap.herokuapp.com/api/"
+  url : string = "https://vcinthia-aplicacionjava-production.up.railway.app/api/"
+
   constructor(private http:HttpClient) { }
 
   obtenerDatos():Observable<any>{
