@@ -12,14 +12,16 @@
 }
 
 .botonera li a:hover{
-	color: #191c24;
+	/* color: #191c24; */
 	text-decoration: none;
 	/*boton cuando nos posicionamos*/
 }
 
 img{
-    width: 40px;
+	align-items: baseline;
+    width: 35px;
     display: inline-block;
 	margin-left: 20px;
+	
 	
 }

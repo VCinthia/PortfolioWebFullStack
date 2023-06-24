@@ -24,6 +24,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { PortfolioService } from './servicios/portfolio.service';
 import { InterceptorService } from './servicios/interceptor.service';
 import { NEducacionComponent } from './components/educacion/n-educacion.component';
+import { NavbarComponent } from './components/header-c/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { NEducacionComponent } from './components/educacion/n-educacion.componen
     FooterComponent,
     IniciarSesionComponent,
     PortfolioComponent,
-    NEducacionComponent
+    NEducacionComponent,
+    NavbarComponent
     ],
   imports: [
     BrowserModule,

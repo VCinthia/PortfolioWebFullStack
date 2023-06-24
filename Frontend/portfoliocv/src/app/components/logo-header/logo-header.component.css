@@ -1,9 +1,67 @@
-#logoArgProg{
-    width: 150px;
-    opacity: 60%;
+#navbar {
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+    justify-content:right;
+    padding: 20px;
+    
 }
-@media(max-widh:576px){    
-    #logoArgProg{
+
+#logo{
+    width: 60px;
+}
+
+.botonera a{
+    text-decoration:  none;
+    color:#dddddd;
+	margin-left: 8px;
+	font-weight: 300;
+	font-size: 20px;
+    margin-left: 20px;
+}
+
+.botonera li a{
+	color: #dddddd;
+}
+
+.botonera a:hover{
+	color: #834796;
+	text-decoration: none;
+    font-weight: 350;
+}
+
+img{
+    width: 35px;
+	margin-left: 20px;
+}
+
+.menu-hamburguesa button {
+    display: none; 
+}
+
+.botonera {
+    display: show ;
+}
+
+@media (max-width: 576px) {
+    #logo{
         display: none;
-    } 
+    }
+    .menu-hamburguesa .botonera {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #hamburguesa-btn {
+        display: block;
+    }
+
+    #hamburguesa-btn {
+        display: inline-block;
+        background: none;
+        border: none;
+        color: #dddddd;
+        font-size: 24px;
+        cursor: pointer;
+    }
 }

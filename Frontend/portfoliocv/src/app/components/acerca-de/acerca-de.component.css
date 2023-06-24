@@ -1,5 +1,10 @@
 .row{
     padding: 60px;
+
+}
+
+.container-fluid{
+    display: flex;
 }
 div{
     text-align: right;
@@ -38,4 +43,15 @@ div{
 }
 span{
     font-size:large;
+}
+
+
+@media (max-width: 576px) {
+    #img-perfil{
+        display: none;
+    }
+
+    .sombre-mi-perfil{
+        display: none;
+    }
 }

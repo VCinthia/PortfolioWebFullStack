@@ -1,6 +1,7 @@
 .fijo{
     /*background-color: #7E9EA4 ;*/
-    padding: 10px;
+    /* padding: 10px; */
+    /* background-color: #1d1d1d; */
     background-color: #919E95;
     z-index: +1;
     position:sticky;
@@ -8,8 +9,12 @@
 	width: 100%;
     /*border-radius: 10px;*/
 }
+
 app-social-header{
-    margin-top: 30px;
+    /* align-items:baseline; */
+    justify-content: space-around;
+    display: flex;
+    margin-top: 20px;
     float: right;
     margin-right: 20px;
 }
